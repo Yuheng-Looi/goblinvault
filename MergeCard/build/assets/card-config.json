@@ -1,0 +1,21 @@
+{
+	"card": {
+		"support": "2*4|notification_sm|notification_md|notification_lg"
+	},
+	"click": [
+		{
+			"type": "activity",
+			"packageName": "com.seedling.demo.hostdeveloperdemo",
+			"action": "",
+			"category": "",
+			"params": {
+				"key": "value"
+			}
+		}
+	],
+	"host": {
+		"packageName": "com.seedling.demo.hostdeveloperdemo",
+		"componentName": "com.seedling.demo.hostdeveloperdemo.CardLifeCycleProvider",
+		"minHostVersion": 1
+	}
+}
