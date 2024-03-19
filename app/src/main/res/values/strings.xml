@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SeedlingHostDeveloperDemo</string>
+    <string name="app_name">Goblin Vault</string>
     <string name="card_auth_code">ADBFAiAvvJbbH5TZ7QlLVP8Tywml+BZJo4lUWzaL7xvuLFaAjAIhALPvcWcj+AwynM5Yl+99OP7T4qLC0fCxt81lwlpSqN0LblfaeQ==</string>
     <string name="swap_card">Swap Card</string>
     <string name="add_card">Add Card</string>
@@ -9,7 +9,6 @@
     <string name="report">Report</string>
     <string name="oppocoin">Oppo Coin</string>
     <string name="bank_card_image">Bank Card Image</string>
-    <string name="oppo_pay">Oppo Pay</string>
     <string name="user_name">Tey Henry</string>
     <string name="startDetect">Place the back of the device against the NFC reader</string>
 </resources>

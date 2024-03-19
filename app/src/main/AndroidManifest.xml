@@ -34,7 +34,7 @@
             android:icon="@drawable/qrcode_black"
             android:label="Receive QR">
             <intent-filter>
-                <action android:name="com.seedling.demo.hostdeveloperdemo.ACTION_QR" />
+<!--                <action android:name="com.seedling.demo.hostdeveloperdemo.ACTION_QR" />-->
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
