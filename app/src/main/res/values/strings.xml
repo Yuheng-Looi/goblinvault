@@ -11,4 +11,6 @@
     <string name="bank_card_image">Bank Card Image</string>
     <string name="user_name">Tey Henry</string>
     <string name="startDetect">Place the back of the device against the NFC reader</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

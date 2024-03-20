@@ -8,6 +8,7 @@
         android:required="false" />
 
 <!--    <uses-permission android:name="android.permission.NFC" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
@@ -93,18 +94,33 @@
             android:exported="true"
             android:icon="@drawable/profile_pic"
             android:label="Oppo Pay">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <action android:name="com.seedling.demo.hostdeveloperdemo.ACTION_NFC" />
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.DEFAULT" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+<!--                <action android:name="com.seedling.demo.hostdeveloperdemo.ACTION_NFC" />-->
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
 
-                <data android:mimeType="text/plain" />
-            </intent-filter>
+<!--                <data android:mimeType="text/plain" />-->
+<!--            </intent-filter>-->
 
             <meta-data
                 android:name="android.nfc.action.TECH_DISCOVERED"
                 android:resource="@xml/nfc_tech_filter" />
+        </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".SplashScreenActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
         <!--
  permission：OPPO内部应用必须配置，外部三方不做要求，必选项->
