@@ -1,29 +1,21 @@
-package com.seedling.demo.hostdeveloperdemo;
+package com.seedling.demo.hostdeveloperdemo
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
+import android.content.Intent
+import android.os.Bundle
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
-import androidx.appcompat.app.AppCompatActivity;
+class SplashScreenActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash_screen)
+        val IVSplashImage = findViewById<ImageView>(R.id.IVSplashImage)
+        IVSplashImage.setOnClickListener {
+            val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+            startActivity(intent)
 
-public class SplashScreenActivity extends AppCompatActivity {
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash_screen);
-
-        ImageView IVSplashImage = findViewById(R.id.IVSplashImage);
-
-        IVSplashImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SplashScreenActivity.this, LoginActivity.class);
-                startActivity(intent);
-
-                // Finish the SplashScreenActivity to prevent going back to it from LoginActivity
-                finish();
-            }
-        });
+            // Finish the SplashScreenActivity to prevent going back to it from LoginActivity
+            finish()
+        }
     }
 }

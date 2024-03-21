@@ -48,21 +48,6 @@ class DestForgotPassword : Fragment() {
         btnReset = view.findViewById(R.id.BtnSubmit)
         edtEmail = view.findViewById(R.id.editTextText3)
 
-//        mAuth = FirebaseAuth.getInstance();
-
-        // Reset Button Listener
-//        btnReset.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                strEmail = edtEmail.getText().toString().trim();
-//                if (!TextUtils.isEmpty(strEmail)) {
-//                    ResetPassword();
-//                } else {
-//                    edtEmail.setError("Email field can't be empty");
-//                }
-//            }
-//        });
-
         // Back Button Code
         btnBack.setOnClickListener(View.OnClickListener { // Navigate back to login or handle as needed
             findNavController(view).navigate(R.id.DestLogin)
