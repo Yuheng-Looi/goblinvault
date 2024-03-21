@@ -8,9 +8,10 @@
     <color name="dark_green1">#2D4356</color>
     <color name="dark_green2">#435B66</color>
     <color name="red">#A76F6F</color>
+    <color name="light_pink">#EAB2A0</color>
+
     <color name="stock_green">#52a55a</color>
     <color name="stock_red">#bb4a65</color>
-    <color name="light_pink">#EAB2A0</color>
 
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
