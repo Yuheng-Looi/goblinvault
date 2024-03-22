@@ -36,6 +36,11 @@
             android:name=".LoginActivity"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name=".ProfileEditingActivity"
+            android:exported="true">
+        </activity>
     </application>
 
 </manifest>
