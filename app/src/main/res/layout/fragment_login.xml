@@ -34,10 +34,10 @@
         android:id="@+id/imageView6"
         android:layout_width="117dp"
         android:layout_height="100dp"
-        android:layout_marginTop="136dp"
+        android:layout_marginTop="108dp"
         android:src="@drawable/logo_goblinvault"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.098"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
