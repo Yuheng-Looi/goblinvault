@@ -5,7 +5,7 @@
     android:id="@+id/profilePage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark">
+    android:background="@color/secondary_dark">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,7 +35,6 @@
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="24dp"
-                android:background="@drawable/rounded_rect_editprofile_black"
                 android:orientation="vertical"
                 android:padding="10dp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -45,19 +44,23 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/me"
-                        app:tint="@color/white" />
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
 
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/me"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/usernameTV"
@@ -76,22 +79,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
-                    android:alpha="0.5"
+                    android:alpha="0"
                     android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/date_of_birth" />
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/date_of_birth"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
 
 
                     <TextView
@@ -111,22 +118,27 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
-                    android:alpha="0.5"
+                    android:alpha="0.0"
                     android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/phone" />
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/phone"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/phoneNumberTV"
@@ -145,22 +157,26 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
-                    android:alpha="0.5"
+                    android:alpha="0.0"
                     android:background="@color/white" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
-                    <ImageView
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/email" />
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/email"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
 
                     <TextView
                         android:id="@+id/emailTV"
@@ -179,7 +195,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_margin="10dp"
-                    android:alpha="0.5"
+                    android:alpha="0.0"
                     android:background="@color/white" />
 
 
