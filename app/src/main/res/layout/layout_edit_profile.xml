@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary_dark">
+    android:background="@color/secondary_dark">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -26,20 +26,25 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/editButton"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:layout_marginBottom="28dp"
-                android:background="@android:color/transparent"
-                android:scaleType="fitXY"
-                android:src="@drawable/edit_pencil"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            <FrameLayout
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="136dp"
+                android:background="@drawable/round_primary_dark"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.617"
+                app:layout_constraintHorizontal_bias="0.632"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/profileView"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/editButton"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/edit_pencil" />
+            </FrameLayout>
 
             <LinearLayout
                 android:id="@+id/linearLayout"

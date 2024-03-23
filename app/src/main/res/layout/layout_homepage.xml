@@ -1,6 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/secondary_dark"
+    android:padding="@dimen/margin">
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:ignore="MissingConstraints"
+
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/profile_pic"/>
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/username"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_marginLeft="10dp"
+                    app:layout_constraintLeft_toRightOf="@id/profile_pic"/>
+
+                <TextView
+                    android:id="@+id/welcome_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    app:layout_constraintTop_toBottomOf="@id/user_name"
+                    app:layout_constraintStart_toEndOf="@id/profile_pic"/>
+
+                <TextView
+                    android:id="@+id/analytic_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:text="Expenses Analytic (Nov)"
+                    android:textColor="#fff"
+                    android:textSize="17dp"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@id/profile_pic"
+                    tools:layout_editor_absoluteX="10dp" />
+
+                <ImageButton
+                    android:id="@+id/menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/secondary_dark"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:src="@drawable/menu_vert"
+                    app:layout_constraintTop_toBottomOf="@id/profile_pic"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/chartTypeOptions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toBottomOf="@+id/analytic_title"
+                    tools:layout_editor_absoluteX="10dp">
+
+                    <Button
+                        android:id="@+id/btnYearly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rounded_rect_primary_dark"
+                        android:text="Yearly"
+                        app:layout_constraintTop_toBottomOf="@id/analytic_title" />
+
+                    <Button
+                        android:id="@+id/btnMonthly"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Monthly"
+                        app:layout_constraintEnd_toStartOf="@id/btnDaily"
+                        app:layout_constraintStart_toEndOf="@id/btnYearly"
+                        app:layout_constraintTop_toBottomOf="@id/analytic_title" />
+
+                    <Button
+                        android:id="@+id/btnDaily"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Daily"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/analytic_title" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTotalExpense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toBottomOf="@id/chartTypeOptions"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/secondConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstConstraint"
+                android:layout_marginVertical="10dp">
+
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/secondConstraint"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvTransactionHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction History"
+                    android:textSize="@dimen/title_text_size"
+                    android:textColor="@color/white"
+                    app:layout_constraintTop_toTopOf="@id/ivArrow"
+                    app:layout_constraintBottom_toBottomOf="@id/ivArrow"
+                    app:layout_constraintStart_toStartOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/ivArrow"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@drawable/ic_arrow_left"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTransaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    tools:listitem="@layout/transaction_history"
+                    app:layout_constraintTop_toBottomOf="@id/tvTransactionHistory"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
