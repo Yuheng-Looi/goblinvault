@@ -22,7 +22,7 @@
                 android:layout_height="136dp"
                 android:layout_marginTop="52dp"
                 android:layout_marginEnd="56dp"
-                android:src="@drawable/me"
+                android:src="@drawable/profile_pic"
                 app:civ_border_color="@color/white"
                 app:civ_border_width="2dp"
                 app:layout_constraintEnd_toStartOf="@+id/BtnEditProfile"
@@ -71,7 +71,7 @@
                         android:paddingTop="20dp"
                         android:paddingEnd="30dp"
                         android:textColor="@color/primary_white"
-                        android:text="Adam"
+                        android:text="@string/username"
                         android:textAlignment="viewStart"
                         android:textSize="20sp"
                         android:textStyle="bold" />
