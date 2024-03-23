@@ -1,6 +1,275 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/profilePage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/secondary_dark">
 
-</LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="48dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileView"
+                android:layout_width="136dp"
+                android:layout_height="136dp"
+                android:layout_marginTop="52dp"
+                android:layout_marginEnd="56dp"
+                android:src="@drawable/me"
+                app:civ_border_color="@color/white"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/BtnEditProfile"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/scoreProgressBar">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/me"
+                            android:layout_gravity="center" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/usernameTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="30dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="30dp"
+                        android:textColor="@color/primary_white"
+                        android:text="Adam"
+                        android:textAlignment="viewStart"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/date_of_birth"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+
+                    <TextView
+                        android:id="@+id/birthDateTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="30dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="30dp"
+                        android:text="23-12-2004"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/primary_white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.0"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/phone"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/phoneNumberTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="30dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="30dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/primary_white"
+                        android:text="018-223-4432"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.0"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_primary_dark">
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/email"
+                            android:layout_gravity="center"/>
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/emailTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingStart="30dp"
+                        android:paddingTop="20dp"
+                        android:paddingEnd="30dp"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/primary_white"
+                        android:text="zyx@gmail.com"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:alpha="0.0"
+                    android:background="@color/white" />
+
+
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/BtnEditProfile"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="130dp"
+                android:background="@color/secondary_dark"
+                android:contentDescription="Edit Profile icon"
+                android:scaleType="fitCenter"
+                android:src="@drawable/edit_profile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.906"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/scoreProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="286dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="8dp"
+                android:max="8"
+                android:progress="0"
+                android:progressDrawable="@drawable/custom_progress_drawable"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.256"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ProfileEnhancedTV" />
+
+            <TextView
+                android:id="@+id/ProfileEnhancedTV"
+                android:layout_width="326dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="228dp"
+                android:text="Complete your profile"
+                android:textColor="@color/primary_green"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.376"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/enhancedSurveyPercentage"
+                android:layout_width="52dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="52dp"
+                android:text="50%"
+                android:textColor="@color/primary_white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/scoreProgressBar"
+                app:layout_constraintTop_toBottomOf="@+id/profileView"
+                app:layout_constraintVertical_bias="0.428" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
