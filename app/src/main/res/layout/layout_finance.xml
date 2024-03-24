@@ -1,338 +1,477 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/secondary_dark"
-    android:padding="@dimen/margin">
+    android:layout_height="wrap_content"
+
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/usernameLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        >
-
-        <ImageView
-            android:id="@+id/profile_pic"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/profile_pic"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
-
-        <TextView
-            android:id="@+id/usernameTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:text="@string/username"
-            android:textColor="@color/white"
-            android:textSize="@dimen/title_text_size"
-            app:layout_constraintStart_toEndOf="@id/profile_pic"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginLeft="@dimen/margin"/>
-
-        <TextView
-            android:id="@+id/welcome_message"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome Back"
-            android:textColor="#fff"
-            android:layout_marginLeft="@dimen/margin"
-            android:layout_marginTop="20dp"
-            app:layout_constraintTop_toBottomOf="@id/usernameTV"
-            app:layout_constraintStart_toEndOf="@id/profile_pic"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/balanceViewLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/usernameLayout"
-        android:layout_marginTop="@dimen/margin"
-        android:background="@drawable/rounded_rect_primary_dark"
+        android:layout_height="match_parent"
+        android:background="@color/secondary_dark"
         android:padding="@dimen/margin">
 
-        <TextView
-            android:id="@+id/balanceTV"
-            android:layout_width="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/usernameLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="AI bot"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <ImageView
+                android:id="@+id/profile_pic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/profile_pic"
+                android:background="@drawable/circle"
+                android:scaleType="centerCrop"
+
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Henry's investment"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="@dimen/title_text_size"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintLeft_toRightOf="@id/profile_pic"
+                tools:ignore="MissingConstraints" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/balanceViewLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/usernameLayout"
+            android:layout_marginTop="@dimen/margin"
+            android:background="@drawable/rounded_rect_primary_dark"
+            android:padding="@dimen/margin">
+
+            <TextView
+                android:id="@+id/tvAIbot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AI bot"
+                android:textSize="@dimen/title_text_size"
+                android:textStyle="bold"
+                android:textColor="@color/primary_white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/tvAIbot"
+                android:background="@drawable/rounder_rect_black"
+                android:paddingVertical="5dp">
+
+                <TextView
+                    android:id="@+id/amountBalanceTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What is the most beneficial way to save \nmoney?"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    android:textColor="@color/teal_200"
+                    android:paddingLeft="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/sendIcon"
+                    tools:ignore="MissingConstraints" />
+
+                <ImageView
+                    android:id="@+id/sendIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:paddingVertical="5dp"
+                    android:src="@drawable/send"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/amountBalanceTV"
+                    tools:ignore="MissingConstraints" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/MyAssetsTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/balanceViewLayout"
+            android:text="My Assets"
             android:textSize="@dimen/title_text_size"
             android:textStyle="bold"
             android:textColor="@color/primary_white"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
 
-        <TextView
-            android:id="@+id/amountBalanceTV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="What is the "
-            android:textSize="30sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary_green"
-            app:layout_constraintTop_toBottomOf="@id/balanceTV"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:layout_margin="@dimen/margin"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:text="Profit"
-            android:textColor="@color/primary_white" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/MyAssetsTV"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/balanceViewLayout"
-        android:text="My Assets"
-        android:textSize="@dimen/normal_text_size"
-        android:textStyle="bold"
-        android:textColor="@color/primary_white"
-        android:layout_margin="@dimen/margin"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/assetsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        app:layout_constraintTop_toBottomOf="@id/MyAssetsTV"
-        android:layout_margin="@dimen/margin">
-
-        <HorizontalScrollView
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/assetsLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/MyAssetsTV"
+            android:paddingVertical="5dp"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/earningMonth"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_primary_dark"
+                android:paddingVertical="10dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/earningAll"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tvThisMonth"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/white"
+                    android:paddingLeft="5dp"
+                    android:text="This Month:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/teal_200"
+                    android:text="+ RM 30.00"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@+id/tvThisMonth"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/earningAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_rect_primary_dark"
+                android:paddingVertical="10dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/earningMonth"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <TextView
+                    android:id="@+id/tvAll"
+                    android:paddingLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textStyle="normal"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textColor="@color/white"
+                    android:text="All:"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/teal_200"
+                    android:text="+ RM 200.00"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    app:layout_constraintTop_toBottomOf="@+id/tvAll"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="150dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@mipmap/ic_launcher"-->
+            <!--                    android:layout_marginRight="@dimen/margin"/>-->
+
+            <!--                <ImageView-->
+            <!--                    android:layout_width="150dp"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:src="@mipmap/ic_launcher"/>-->
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/assetsLayout"
+            android:text="Stock Today"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/primary_white"
+
+            android:layout_margin="@dimen/margin"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tvStock"
+            android:layout_marginHorizontal="@dimen/margin"
+            android:paddingVertical="10dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"
-                    android:layout_marginRight="@dimen/margin"/>
+                <!--            will using recycleView when implementing backend-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin">
 
-                <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:src="@mipmap/ic_launcher"/>
+                    <ImageView
+                        android:id="@+id/stockIcon"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/dow_logo"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="Dow Jones"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/primary_white"
+                        android:layout_toRightOf="@id/stockIcon"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="Dow Jones Industrial Average"
+                        android:textColor="@color/primary_white"
+                        android:paddingLeft="5dp"
+                        android:layout_toRightOf="@id/stockIcon"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="39,475.90"
+                        android:textColor="@color/primary_white"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="- 305.47"
+                        android:textColor="@color/stock_red"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin">
+
+                    <ImageView
+                        android:id="@+id/stockIcon2"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/klse_logo"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="^KLSE"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/primary_white"
+                        android:layout_toRightOf="@id/stockIcon2"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="FTSE Bursa Malaysia KLCI"
+                        android:textColor="@color/primary_white"
+                        android:paddingLeft="5dp"
+                        android:layout_toRightOf="@id/stockIcon2"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="1542.39"
+                        android:textColor="@color/primary_white"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="+ 0.98"
+                        android:textColor="@color/teal_200"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin">
+
+                    <ImageView
+                        android:id="@+id/stockIcon3"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/apple_logo"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="AAPL"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/primary_white"
+                        android:layout_toRightOf="@id/stockIcon3"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="Apple Inc."
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/primary_white"
+                        android:layout_toRightOf="@id/stockIcon3"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="172.28"
+                        android:textColor="@color/primary_white"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="+ 0.91"
+                        android:textColor="@color/teal_200"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/margin">
+
+                    <ImageView
+                        android:id="@+id/stockIcon4"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:src="@drawable/images"
+                        android:layout_alignParentLeft="true"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="BA"
+                        android:textStyle="bold"
+                        android:paddingLeft="5dp"
+                        android:textColor="@color/primary_white"
+                        android:layout_toRightOf="@id/stockIcon4"/>
+
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="20dp"
+                        android:text="The Boeing Company"
+                        android:textColor="@color/primary_white"
+                        android:paddingLeft="5dp"
+                        android:layout_toRightOf="@id/stockIcon4"
+                        android:layout_alignParentBottom="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="188.85"
+                        android:textColor="@color/primary_white"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:layout_width="55dp"
+                        android:layout_height="20dp"
+                        android:text="+ 1.15"
+                        android:textColor="@color/teal_200"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"/>
+
+
+                </RelativeLayout>
 
             </LinearLayout>
-        </HorizontalScrollView>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/assetsLayout"
-        android:layout_marginHorizontal="@dimen/margin">
-
-        <LinearLayout
+        <TextView
+            android:id="@+id/tvNews"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/stock"
+            android:text="News"
+            android:textSize="@dimen/title_text_size"
+            android:textStyle="bold"
+            android:textColor="@color/primary_white"
 
-<!--            will using recycleView when implementing backend-->
-            <RelativeLayout
+            android:layout_margin="@dimen/margin"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/tvNews"
+            android:background="@drawable/rounder_rect_black">
+
+            <TextView
+                android:id="@+id/tvNewsTitle"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/margin">
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                android:text="Dow closes 300 points lower Friday, but notches best week since December"
+                android:textColor="@color/white"
+                tools:ignore="MissingConstraints"
+                 />
 
-                <ImageView
-                    android:id="@+id/stockIcon"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/profile_pic"
-                    android:layout_alignParentLeft="true"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple Inc."
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon"
-                    android:layout_alignParentBottom="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="$2000"
-                    android:textColor="@color/primary_white"
-                    android:layout_alignParentRight="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="- 3.10%"
-                    android:textColor="@color/stock_red"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvNewsTitle"
+                android:src="@drawable/stock"
+                tools:ignore="MissingConstraints" />
 
 
-            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/margin">
-
-                <ImageView
-                    android:id="@+id/stockIcon2"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/profile_pic"
-                    android:layout_alignParentLeft="true"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon2"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple Inc."
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon2"
-                    android:layout_alignParentBottom="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="$2000"
-                    android:textColor="@color/primary_white"
-                    android:layout_alignParentRight="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="- 3.10%"
-                    android:textColor="@color/stock_red"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/margin">
-
-                <ImageView
-                    android:id="@+id/stockIcon3"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/profile_pic"
-                    android:layout_alignParentLeft="true"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon3"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple Inc."
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon3"
-                    android:layout_alignParentBottom="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="$2000"
-                    android:textColor="@color/primary_white"
-                    android:layout_alignParentRight="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="- 3.10%"
-                    android:textColor="@color/stock_red"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
-
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/margin">
-
-                <ImageView
-                    android:id="@+id/stockIcon4"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
-                    android:src="@drawable/profile_pic"
-                    android:layout_alignParentLeft="true"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple"
-                    android:textStyle="bold"
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon4"/>
-
-                <TextView
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:text="Apple Inc."
-                    android:textColor="@color/primary_white"
-                    android:layout_toRightOf="@id/stockIcon4"
-                    android:layout_alignParentBottom="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="$2000"
-                    android:textColor="@color/primary_white"
-                    android:layout_alignParentRight="true"/>
-
-                <TextView
-                    android:layout_width="55dp"
-                    android:layout_height="20dp"
-                    android:text="- 3.10%"
-                    android:textColor="@color/stock_red"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
