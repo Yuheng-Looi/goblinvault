@@ -10,6 +10,7 @@ Introducing our innovative mobile application, your ultimate multi-functional wa
 ## Modules
 ### Homepage
 We have implemented the expenses record chart and transaction story that can show the users' expenses daily, monthly and yearly to provide a clear image to users about financial management. Users can know where they are spending a lot and try to reduce it.
+![homepage](Screenshots/homepage.png)
 ### Financial Module
 The financial module contains an AI bot that provides recommendations and guidance on financial literacy. This can help users to improve their knowledge about the investment strategy and financial risk. There is also an assets overview of users' earnings on investment. Next, we are providing a stock market view and live financial news so that users can know the latest financial news and trading trends.
 ### eWallet
